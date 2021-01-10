@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block nav %}
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+    </div>
+</nav>
+
+
+{% endblock nav %}
+
+{% block pagecontent %}
+<h1>JustinMeimar.com</h1>
+<button onclick="hideFunction()">Hide</button>
+<div id="models">
+    
+    <ol>
+    {% for object in qs %}
+        <li> Name: {{ object.name }} Message: {{ object.message }} </li>>
+    {% endfor %}
+    </ol>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+<div id="footer">
+<div id="contactform">
+    <h4>Contact Form</h4>
+    <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="title"/>          
+    </form>
+</div>
+</div>
+
+{% endblock footer %}

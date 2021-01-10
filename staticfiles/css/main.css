@@ -1,0 +1,25 @@
+h1{
+    color: navy;
+    text-align: center;
+}
+
+#contactform{
+    
+    text-align:center;
+    
+}
+
+#models {
+    position: fixed;
+    left:20px;
+    width: 100px;
+}
+
+#footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+#entire {
+    overflow:scroll;
+}
